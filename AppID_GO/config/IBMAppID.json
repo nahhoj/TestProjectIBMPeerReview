@@ -1,0 +1,6 @@
+{
+    "ClientId" : "7480a23b-c5fe-47c1-8879-2817e54bbec3",
+    "ClientSecret" : "MWMyYmVjMzgtMGMwZC00NDhiLWE1MzktMTI5ZDY1OWIwYjFl",
+    "AuthURL" : "https://us-south.appid.cloud.ibm.com/oauth/v4/3a17ee75-4db5-42af-b1b0-dc38a5f2750f",
+    "RedirectUrl" : "http://localhost:3000/auth/callback"
+}
