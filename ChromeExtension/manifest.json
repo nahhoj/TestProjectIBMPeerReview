@@ -1,0 +1,27 @@
+{
+    "name": "Jira PeerReview",
+    "version": "0.1",
+    "description": "Extention integration Jira - PeerReview",
+    "permissions": [
+          "storage",
+          "*://jsw.ibm.com/*"
+    ],
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": false
+    },
+    "content_scripts": [
+      {
+        "matches": [
+          "https://jsw.ibm.com/secure/RapidBoard.jspa*"        
+        ],
+        "js": [       
+          "contentScript.js"
+        ]
+      }
+    ],
+    "icons": {   
+      "48": "images/IBM.png"    
+    },
+    "manifest_version": 2
+  }
