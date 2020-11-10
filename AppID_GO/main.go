@@ -104,8 +104,11 @@ func callback(res http.ResponseWriter, req *http.Request) {
 		return
 	}
 	//get token
+	fmt.Println(keys[0])
+
 	token, _ := conf.Exchange(context.Background(), keys[0])
 	client := conf.Client(context.Background(), &oauth2.Token{AccessToken: token.AccessToken})
+
 	userinfo, _ := client.Get(strings.Replace(conf.Endpoint.AuthURL, "/authorization", "/userinfo", 1))
 	var profile map[string]interface{}
 	error := json.NewDecoder(userinfo.Body).Decode(&profile)
